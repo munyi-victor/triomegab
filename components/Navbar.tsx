@@ -23,14 +23,10 @@ const Navbar = () => {
     }
   };
 
-  const smallScreen = window.innerWidth < 670;
-
   const closeMenu = () => {
-    if (smallScreen) {
-      navDiv.current.style.right = "-250px";
-      setIsOpen(false);
-      setIcon(<h1 style={{ fontSize: 26 }}>&#9776;</h1>);
-    }
+    navDiv.current.style.right = "-250px";
+    setIsOpen(false);
+    setIcon(<h1 style={{ fontSize: 26 }}>&#9776;</h1>);
   }
 
   return (
