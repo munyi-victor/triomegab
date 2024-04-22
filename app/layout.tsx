@@ -4,10 +4,6 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-import { GlobalStyle } from "@/styles/App.styles";
-
-const inter = Inter({ subsets: ["latin"] });
-
 export const metadata: Metadata = {
   title: "TriomegaB Hearts of Passion",
   description:
@@ -21,8 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <GlobalStyle/>
+      <body className="relative">
         <Navbar />
         {children}
         <Footer />

@@ -1,7 +1,5 @@
 const Donate = () => {
-  return (
-    <div>Donate</div>
-  )
+  return <div className="donate">Donate</div>;
 }
 
 export default Donate;

@@ -1,12 +1,11 @@
-import { HeroContainer } from "@/styles/App.styles";
-
 const Hero = () => {
   return (
-    <HeroContainer>
-      <div>
-        <h1>We mentor, inspire and build the youths!</h1>
-      </div>
-    </HeroContainer>
+    <div className="hero_container">
+      <h1>
+        Join us now as we <br />
+        mentor, inspire and build the youths!
+      </h1>
+    </div>
   );
 }
 
