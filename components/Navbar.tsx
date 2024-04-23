@@ -27,19 +27,31 @@ const Navbar = () => {
     navDiv.current.style.right = "-250px";
     setIsOpen(false);
     setIcon(<h1 style={{ fontSize: 26 }}>&#9776;</h1>);
-  }
+  };
 
   return (
     <nav className="nav">
-      <Link href={"/"} onClick={closeMenu}>
-        <Image
-          src="/tmb_logo.jpg"
-          alt="tmb logo"
-          height={40}
-          width={40}
-          className="rounded-full"
-        />
-      </Link>
+      <section
+        style={{
+          display: "flex",
+          alignItems: "center",
+          fontSize: 26,
+          color: "#fff",
+          fontWeight: "bold",
+          gap: 10,
+        }}
+      >
+        <Link href={"/"} onClick={closeMenu}>
+          <Image
+            src="/logo.png"
+            alt="tmb logo"
+            height={40}
+            width={40}
+            className="rounded-full"
+          />
+        </Link>
+        <h1>TriomegaB</h1>
+      </section>
 
       <div ref={navDiv}>
         <ul>
