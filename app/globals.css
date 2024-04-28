@@ -15,6 +15,7 @@
 
 .secondary {
   background-color: purple;
+  color: #fff;
 }
 
 /* navbar styles */
@@ -87,14 +88,7 @@
 
 /* hero styles */
 .hero_container {
-  height: 87vh;
-  width: 100%;
-  text-align: center;
-  padding-top: 8%;
-
-  h1 {
-    font-size: 40px;
-  }
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/public/hero_img.jpg);
 }
 
 @media only screen and (max-width: 670px) {
@@ -109,6 +103,10 @@
 
 /* footer styles */
 .footer {
+  height: 6vh;
+  align-items: center;
+  display: flex;
+  justify-content: center;
   position: relative;
   left: 0;
   bottom: 0;
@@ -131,19 +129,16 @@
 }
 
 /* about styles */
-.about {
-  height: 87vh;
-  position: relative;
+/* .about {
+  
 }
 
 /* donate styles */
-.donate {
-  height: 87vh;
-  position: relative;
-}
+/* .donate {
+  
+} */
 
 /* contact styles */
-.contact {
-  height: 87vh;
-  position: relative;
-}
+/* .contact {
+  
+}  */
