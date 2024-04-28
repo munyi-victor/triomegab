@@ -1,7 +1,20 @@
-import Link from "next/link";
+"use client";
+
+import { useState } from "react"
 import CustomButton from "./CustomButton";
+import JoinModal from "@/components/JoinModal";
 
 const Hero = () => {
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const openModal = () => {
+    setModalOpen(true);
+  }
+
+  const closeModal = () => {
+    setModalOpen(false);
+  }
+
   return (
     <div
       className="hero_container bg-cover bg-center bg-no-repeat h-[89vh] lg:h-[90vh] w-full text-center pt-36 pb-10 border-b border-solid border-black-100"
@@ -18,9 +31,23 @@ const Hero = () => {
       </p>
 
       <div className="mt-20 flex items-center justify-center">
-        <Link href={"/"}>
-          <CustomButton customClass="primary" value="Join Us Now" />
-        </Link>
+        <CustomButton
+          customClass="primary"
+          value="Join Us Now"
+          handleClick={openModal}
+        />
+      </div>
+
+      {modalOpen && <JoinModal closeModal={closeModal} />}
+
+      <div className="mt-14">
+        <h3 className="text-gray-100">Connect with us:</h3>
+        <div className="flex gap-5 justify-center">
+          <h4>Facebook</h4>
+          <h4>Instagram</h4>
+          <h4>Web</h4>
+          <h4>Email</h4>
+        </div>
       </div>
     </div>
   );

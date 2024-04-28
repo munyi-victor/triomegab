@@ -3,6 +3,7 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import CustomButton from "./CustomButton";
 import Cores from "./Cores";
+import JoinModal from "./JoinModal";
 
 export default {
   Hero,
@@ -10,4 +11,5 @@ export default {
   Footer,
   CustomButton,
   Cores,
+  JoinModal,
 };
