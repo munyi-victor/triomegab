@@ -30,7 +30,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="nav">
+    <nav className="nav flex py-[12px] px-[50px] justify-between items-center w-full h-[10%] z-10 shadow-lg bg-fuchsia-900">
       <section
         style={{
           display: "flex",
@@ -45,33 +45,52 @@ const Navbar = () => {
           <Image
             src="/logo.png"
             alt="tmb logo"
-            height={40}
-            width={40}
+            height={50}
+            width={50}
             className="rounded-full"
           />
         </Link>
         <h1>TriomegaB</h1>
       </section>
 
-      <div ref={navDiv}>
-        <ul>
+      <div
+        ref={navDiv}
+        className="flex flex-col fixed items-center h-full w-[250px] z-10 top-[9.8%] right-[-250px] pt-[20px] transition duration-700 gap-[40px] bg-fuchsia-900 md:flex md:flex-row md:relative md:z-0 md:w-full md:pt-0 md:top-0"
+      >
+        <ul className="flex flex-col md:flex-row gap-[20px] items-center list-none">
           <li>
-            <Link href={"/"} onClick={closeMenu}>
+            <Link
+              href={"/"}
+              onClick={closeMenu}
+              className="text-[20px] text-white"
+            >
               Home
             </Link>
           </li>
           <li>
-            <Link href={"/about"} onClick={closeMenu}>
+            <Link
+              href={"/about"}
+              onClick={closeMenu}
+              className="text-[20px] text-white"
+            >
               About us
             </Link>
           </li>
           <li>
-            <Link href={"/donate"} onClick={closeMenu}>
+            <Link
+              href={"/donate"}
+              onClick={closeMenu}
+              className="text-[20px] text-white"
+            >
               Donate
             </Link>
           </li>
           <li>
-            <Link href={"/contact"} onClick={closeMenu}>
+            <Link
+              href={"/contact"}
+              onClick={closeMenu}
+              className="text-[20px] text-white"
+            >
               Contact us
             </Link>
           </li>
@@ -82,7 +101,10 @@ const Navbar = () => {
         </Link>
       </div>
 
-      <span onClick={toggleOpenMenu} className="iconShow">
+      <span
+        onClick={toggleOpenMenu}
+        className="block md:hidden cursor-pointer text-white font-bold"
+      >
         {icon}
       </span>
     </nav>

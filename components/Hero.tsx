@@ -17,8 +17,10 @@ const Hero = () => {
 
   return (
     <div
-      className="hero_container bg-cover bg-center bg-no-repeat h-[89vh] lg:h-[90vh] w-full text-center pt-36 pb-10 border-b border-solid border-black-100"
-      style={{}}
+      className="hero_container bg-cover bg-center bg-no-repeat h-[89vh] lg:h-[90vh] w-full text-center pt-24 md:p-36 pb-10 border-b border-solid border-black-100"
+      style={{
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/hero_img.jpg")`,
+      }}
     >
       <h1 className="text-4xl font-semibold text-white">
         Join us now as we <br />
@@ -42,7 +44,7 @@ const Hero = () => {
 
       <div className="mt-14">
         <h3 className="text-gray-100">Connect with us:</h3>
-        <div className="flex gap-5 justify-center">
+        <div className="flex gap-5 justify-center text-white font-bold">
           <h4>Facebook</h4>
           <h4>Instagram</h4>
           <h4>Web</h4>
