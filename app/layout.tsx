@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import ScrollToTopButton from "@/components/ScrollToTopButton";
 
 export const metadata: Metadata = {
   title: "TriomegaB Hearts of Passion",
@@ -20,6 +21,7 @@ export default function RootLayout({
       <body className="relative h-full">
         <Navbar />
         {children}
+        <ScrollToTopButton/>
         <Footer />
       </body>
     </html>

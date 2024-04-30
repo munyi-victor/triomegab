@@ -4,6 +4,7 @@ import Footer from "./Footer";
 import CustomButton from "./CustomButton";
 import Cores from "./Cores";
 import JoinModal from "./JoinModal";
+import ScrollToTopButton from "./ScrollToTopButton";
 
 export default {
   Hero,
@@ -12,4 +13,5 @@ export default {
   CustomButton,
   Cores,
   JoinModal,
+  ScrollToTopButton,
 };

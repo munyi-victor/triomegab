@@ -88,7 +88,7 @@
 
 /* hero styles */
 .hero_container {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/public/hero_img.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/hero_img.jpg);
 }
 
 @media only screen and (max-width: 670px) {
@@ -127,18 +127,3 @@
   outline: none;
   border-radius: 10px;
 }
-
-/* about styles */
-/* .about {
-  
-}
-
-/* donate styles */
-/* .donate {
-  
-} */
-
-/* contact styles */
-/* .contact {
-  
-}  */
