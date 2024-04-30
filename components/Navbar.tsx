@@ -23,14 +23,15 @@ const Navbar = () => {
     }
   };
 
+
   const closeMenu = () => {
     navDiv.current.style.right = "-250px";
     setIsOpen(false);
     setIcon(<h1 style={{ fontSize: 26 }}>&#9776;</h1>);
-  };
+  }
 
   return (
-    <nav className="nav flex py-[12px] px-[50px] justify-between items-center w-full h-[10%] z-10 shadow-lg bg-fuchsia-900">
+    <nav className="flex py-[12px] px-[50px] justify-between items-center w-full h-[10%] z-10 shadow-lg bg-fuchsia-900">
       <section
         style={{
           display: "flex",
@@ -55,7 +56,7 @@ const Navbar = () => {
 
       <div
         ref={navDiv}
-        className="flex flex-col fixed items-center h-full w-[250px] z-10 top-[9.8%] right-[-250px] pt-[20px] transition duration-700 gap-[40px] bg-fuchsia-900 md:flex md:flex-row md:relative md:z-0 md:w-full md:pt-0 md:top-0"
+        className={`flex gap-[40px] items-center transition duration-700 bg-fuchsia-900 flex-col md:flex-row fixed md:sticky top-[9.7%] md:top-auto w-[250px] md:w-auto right-[-250px] md:right-auto h-full`}
       >
         <ul className="flex flex-col md:flex-row gap-[20px] items-center list-none">
           <li>

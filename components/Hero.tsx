@@ -17,7 +17,7 @@ const Hero = () => {
 
   return (
     <div
-      className="hero_container bg-cover bg-center bg-no-repeat h-[89vh] lg:h-[90vh] w-full text-center pt-24 md:p-36 pb-10 border-b border-solid border-black-100"
+      className="bg-cover bg-center bg-no-repeat h-[89vh] lg:h-[90vh] w-full text-center pt-24 md:p-36 pb-10 border-b border-solid border-black-100"
       style={{
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/hero_img.jpg")`,
       }}
