@@ -1,5 +1,11 @@
 "use client";
 
+import Link from "next/link";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFacebook } from "@fortawesome/free-brands-svg-icons";
+import { faInstagram } from "@fortawesome/free-brands-svg-icons";
+
 import CustomButton from "@/components/CustomButton";
 
 const Contact = () => {
@@ -83,9 +89,18 @@ const Contact = () => {
 
           <div className="mt-4">
             <h2 className="text-center text-xl font-semibold">Social Media:</h2>
-            <ul className="mt-2 flex gap-10">
-              <li>Facebook</li>
-              <li>Instagram</li>
+            <ul className="mt-2 flex gap-6 justify-center">
+              <li>
+                <Link href="/" title="facebook">
+                  <FontAwesomeIcon icon={faFacebook} size="2x" />
+                </Link>
+              </li>
+
+              <li>
+                <Link href="/" title="instagram">
+                  <FontAwesomeIcon icon={faInstagram} size="2x" />
+                </Link>
+              </li>
             </ul>
           </div>
         </div>

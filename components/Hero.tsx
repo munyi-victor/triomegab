@@ -1,8 +1,15 @@
 "use client";
 
-import { useState } from "react"
+import { useState } from "react";
+import Link from "next/link";
+
 import CustomButton from "./CustomButton";
 import JoinModal from "@/components/JoinModal";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFacebook } from "@fortawesome/free-brands-svg-icons";
+import { faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 const Hero = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -44,11 +51,30 @@ const Hero = () => {
 
       <div className="mt-14">
         <h3 className="text-gray-100">Connect with us:</h3>
-        <div className="flex gap-5 justify-center text-white font-bold">
-          <h4>Facebook</h4>
+        <div className="flex justify-center text-white mt-2">
+          <ul className="flex gap-10 list-none">
+            <li>
+              <Link href="/" title="facebook">
+                <FontAwesomeIcon icon={faFacebook} />
+              </Link>
+            </li>
+
+            <li>
+              <Link href="/" title="instagram">
+                <FontAwesomeIcon icon={faInstagram} />
+              </Link>
+            </li>
+
+            <li>
+              <Link href="/" title="email">
+                <FontAwesomeIcon icon={faEnvelope} />
+              </Link>
+            </li>
+          </ul>
+
+          {/* <h4>Facebook</h4>
           <h4>Instagram</h4>
-          <h4>Web</h4>
-          <h4>Email</h4>
+          <h4>Email</h4> */}
         </div>
       </div>
     </div>
