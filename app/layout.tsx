@@ -6,9 +6,9 @@ import Footer from "@/components/Footer";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
 
 export const metadata: Metadata = {
-  title: "TriomegaB Hearts of Passion",
+  title: "TriomegaB Hearts of Passion Foundation",
   description:
-    "A charity organization aimed at mentoring, inspiring and building youths through providing better health and lifestyle",
+    "A charity organization aimed at mentoring, inspiring and building youths through providing better health, education and general lifestyle",
 };
 
 export default function RootLayout({

@@ -71,10 +71,6 @@ const Hero = () => {
               </Link>
             </li>
           </ul>
-
-          {/* <h4>Facebook</h4>
-          <h4>Instagram</h4>
-          <h4>Email</h4> */}
         </div>
       </div>
     </div>

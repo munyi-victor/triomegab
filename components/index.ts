@@ -5,6 +5,7 @@ import CustomButton from "./CustomButton";
 import Cores from "./Cores";
 import JoinModal from "./JoinModal";
 import ScrollToTopButton from "./ScrollToTopButton";
+import ShowAlert from "./ShowAlert";
 
 export default {
   Hero,
@@ -14,4 +15,5 @@ export default {
   Cores,
   JoinModal,
   ScrollToTopButton,
+  ShowAlert,
 };
