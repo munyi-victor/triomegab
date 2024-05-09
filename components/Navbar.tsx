@@ -42,7 +42,11 @@ const Navbar = () => {
   }
 
   return (
-    <nav className={`flex py-[12px] px-[50px] justify-between items-center w-full h-[10%] z-10 shadow-lg bg-fuchsia-900 transition ease-in-out ${isScrolled? "fixed top-0" : ""}`}>
+    <nav
+      className={`flex py-[12px] px-[50px] justify-between items-center w-full h-[10vh] z-10 shadow-lg bg-fuchsia-900 transition ease-in-out ${
+        isScrolled ? "fixed top-0" : ""
+      }`}
+    >
       <section
         style={{
           display: "flex",
@@ -108,7 +112,7 @@ const Navbar = () => {
           </li>
         </ul>
 
-        <Link href={"/"} onClick={closeMenu}>
+        <Link href={"/donate/touchlife"} onClick={closeMenu}>
           <CustomButton customClass="primary" value="Touch Life" />
         </Link>
       </div>

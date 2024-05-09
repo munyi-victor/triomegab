@@ -4,7 +4,7 @@ const Cores = () => {
   return (
     <div className="flex-1 h-full w-auto">
       <div className="pt-6 flex-col gap-10 px-10 md:px-20">
-        <div className="bg-white py-10 px-10 flex-col text-center justify-center align-middle shadow-lg mb-10 rounded-2xl">
+        <div className="bg-white py-10 px-10 flex-col text-center justify-center align-middle shadow-lg mb-10 rounded-2xl border-t">
           <div className="text-center flex justify-center">
             <h1 className="bg-fuchsia-900 text-white rounded-full h-20 w-20 flex justify-center items-center text-4xl font-bold">
               1
@@ -17,7 +17,7 @@ const Cores = () => {
           </p>
         </div>
 
-        <div className="bg-white py-10 px-10 flex-col text-center justify-center align-middle shadow-lg mb-10 rounded-2xl">
+        <div className="bg-white py-10 px-10 flex-col text-center justify-center align-middle shadow-lg mb-10 rounded-2xl border-t">
           <div className="text-center flex justify-center">
             <h1 className="bg-fuchsia-900 text-white rounded-full h-20 w-20 flex justify-center items-center text-4xl font-bold">
               2
@@ -30,7 +30,7 @@ const Cores = () => {
           </p>
         </div>
 
-        <div className="bg-white py-10 px-10 flex-col text-center justify-center align-middle shadow-lg mb-10 rounded-2xl">
+        <div className="bg-white py-10 px-10 flex-col text-center justify-center align-middle shadow-lg mb-10 rounded-2xl border-t">
           <div className="text-center flex justify-center">
             <h1 className="bg-fuchsia-900 text-white rounded-full h-20 w-20 flex justify-center items-center text-4xl font-bold">
               3
