@@ -21,3 +21,7 @@ export interface TeamMembersProps {
   position: string;
   imageSrc: string;
 }
+
+export interface JoinFunProps {
+  JoinNow: () => void;
+}

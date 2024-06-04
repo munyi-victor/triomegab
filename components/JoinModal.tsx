@@ -7,11 +7,9 @@ import ShowAlert from "./ShowAlert";
 import { ModalProps } from "@/types";
 
 const JoinModal = ({ closeModal }: ModalProps) => {
-  const [joined, setJoined] = useState(false);
-
-  const handleJoin = () => {
-    setJoined(true);
-  }
+  const JoinNow = () => {
+    alert("Thank you for joining us, blessings!");
+  };
 
   return (
     <>
@@ -29,9 +27,7 @@ const JoinModal = ({ closeModal }: ModalProps) => {
             &times;
           </span>
 
-          {joined && <ShowAlert />}
-
-          <form className="flex flex-col space-y-4" onSubmit={handleJoin}>
+          <form className="flex flex-col space-y-4">
             <h1 className="font-medium text-2xl text-center">Join TriomegaB</h1>
             <div className="flex flex-col space-y-1 text-left">
               <label
@@ -64,7 +60,7 @@ const JoinModal = ({ closeModal }: ModalProps) => {
             <div className="flex flex-col space-y-1 text-left">
               <label
                 htmlFor="email"
-                className="text-sm font-medium text-gray-700 "
+                className="text-sm font-medium text-gray-700"
               >
                 Email:
               </label>
@@ -80,6 +76,7 @@ const JoinModal = ({ closeModal }: ModalProps) => {
                 value="Join now"
                 customClass="secondary"
                 type="submit"
+                handleClick={JoinNow}
               />
             </div>
           </form>
@@ -87,6 +84,6 @@ const JoinModal = ({ closeModal }: ModalProps) => {
       </div>
     </>
   );
-}
+};
 
 export default JoinModal;

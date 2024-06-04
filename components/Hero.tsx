@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 
 import CustomButton from "./CustomButton";
+import ShowAlert from "./ShowAlert";
 import JoinModal from "@/components/JoinModal";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -13,22 +14,25 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 const Hero = () => {
   const [modalOpen, setModalOpen] = useState(false);
+  const [joined, setJoined] = useState(false);
 
   const openModal = () => {
     setModalOpen(true);
-  }
+  };
 
   const closeModal = () => {
     setModalOpen(false);
-  }
+  };
 
   return (
     <div
-      className="bg-cover bg-center bg-no-repeat h-[89vh] lg:h-[90vh] w-full text-center pt-24 md:p-36 pb-10 border-b border-solid border-black-100"
+      className="bg-cover bg-center bg-no-repeat h-[89vh] lg:h-[90vh] w-full text-center px-2 pt-24 md:p-36 pb-10 border-b border-solid border-black-100"
       style={{
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/hero_img.jpg")`,
       }}
     >
+      {joined && <ShowAlert />}
+
       <h1 className="text-4xl font-semibold text-white">
         Join us now as we <br />
         mentor, inspire and build the youths!
