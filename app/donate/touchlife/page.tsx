@@ -15,19 +15,19 @@ const TouchLife = () => {
         </p>
       </div>
 
-      <div>
-        To make any kind of donations, kindly contact us:
+      <div className="text-center flex flex-col items-center mt-5">
+        <p>To make any kind of donations, kindly contact us:</p>
         <ul>
           <li>+254740077717</li>
           <li>+254708905136</li>
         </ul>
-        <div>
+        <div className="mt-4">
           <p>
             You can also send monetary donations through the following various
             methods:
           </p>
 
-          <div>
+          <div className="flex flex-col items-center">
             <h1>M-pesa</h1>
 
             <Image
@@ -35,11 +35,11 @@ const TouchLife = () => {
               alt="m-pesa"
               height={150}
               width={150}
-              className="rounded h-[150px] w-[150px] mb-1"
+              className="rounded h-[130px] w-[150px] mb-1"
             />
           </div>
 
-          <div>
+          <div className="flex flex-col items-center">
             <h1>PayPal</h1>
 
             <Image
@@ -51,7 +51,7 @@ const TouchLife = () => {
             />
           </div>
 
-          <div>
+          <div className="flex flex-col items-center">
             <h1>Payless</h1>
 
             <Image
@@ -59,7 +59,7 @@ const TouchLife = () => {
               alt="paypal"
               height={150}
               width={150}
-              className="rounded h-[150px] w-[150px] mb-1"
+              className="rounded h-[130px] w-[150px] mb-1"
             />
           </div>
         </div>
