@@ -12,7 +12,7 @@ const Contact = () => {
   const handleSubmit = () => {}
 
   return (
-    <div className="md:h-[84vh] pt-4 w-full">
+    <div className="lg:h-[84vh] pt-4 w-full">
       <h1 className="text-3xl font-semibold md:text-4xl text-center">
         Contact us
       </h1>
