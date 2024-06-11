@@ -15,12 +15,12 @@ const Navbar = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollSize = window.scrollY;
-      setIsScrolled(scrollSize > 10);
-    }
+      setIsScrolled(scrollSize > 100);
+    };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [])
+  }, []);
 
   const toggleOpenMenu = () => {
     if (isOpen) {
@@ -34,29 +34,19 @@ const Navbar = () => {
     }
   };
 
-
   const closeMenu = () => {
     navDiv.current.style.right = "-250px";
     setIsOpen(false);
     setIcon(<h1 style={{ fontSize: 26 }}>&#9776;</h1>);
-  }
+  };
 
   return (
     <nav
       className={`flex py-[12px] px-[50px] justify-between items-center w-full h-[10vh] z-10 shadow-lg bg-fuchsia-900 transition ease-in-out ${
-        isScrolled ? "fixed top-0" : ""
+        isScrolled ? "sticky top-0" : ""
       }`}
     >
-      <section
-        style={{
-          display: "flex",
-          alignItems: "center",
-          fontSize: 26,
-          color: "#fff",
-          fontWeight: "bold",
-          gap: 10,
-        }}
-      >
+      <section className="flex items-center text-[26px] text-white font-bold gap-[10px]">
         <Link href={"/"} onClick={closeMenu}>
           <Image
             src="/logo.png"

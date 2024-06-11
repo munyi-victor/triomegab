@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -18,11 +17,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="relative h-full">
-        <Navbar />
-        {children}
-        <ScrollToTopButton/>
-        <Footer />
+      <body>
+        <div className="min-h-screen flex flex-col">
+          <Navbar />
+          {children}
+          <ScrollToTopButton />
+          <Footer />
+        </div>
       </body>
     </html>
   );
