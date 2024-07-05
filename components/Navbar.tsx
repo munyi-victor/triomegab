@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import CustomButton from "@/components/CustomButton";
@@ -8,19 +8,19 @@ import CustomButton from "@/components/CustomButton";
 const Navbar = () => {
   const [icon, setIcon] = useState(<h1 style={{ fontSize: 26 }}>&#9776;</h1>);
   const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
+  // const [isScrolled, setIsScrolled] = useState(false);
 
   const navDiv = useRef<any>();
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollSize = window.scrollY;
-      setIsScrolled(scrollSize > 100);
-    };
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const scrollSize = window.scrollY;
+  //     setIsScrolled(scrollSize > 100);
+  //   };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => window.removeEventListener("scroll", handleScroll);
+  // }, []);
 
   const toggleOpenMenu = () => {
     if (isOpen) {
@@ -42,10 +42,11 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`flex py-[12px] px-[50px] justify-between items-center w-full h-[10vh] z-10 shadow-lg bg-fuchsia-900 transition ease-in-out ${
-        isScrolled ? "sticky top-0" : ""
-      }`}
+      className={`flex py-[12px] px-[50px] justify-between items-center w-full h-[10vh] z-10 shadow-lg bg-fuchsia-900 transition ease-in-out`}
     >
+      {/* ${
+        isScrolled ? "sticky top-0" : ""
+      } */}
       <section className="flex items-center text-[26px] text-white font-bold gap-[10px]">
         <Link href={"/"} onClick={closeMenu}>
           <Image
