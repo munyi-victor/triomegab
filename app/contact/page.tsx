@@ -91,7 +91,7 @@ const Contact = () => {
             <h2 className="text-center text-xl font-semibold">Social Media:</h2>
             <ul className="mt-2 flex gap-6 justify-center">
               <li>
-                <Link href="/" title="facebook">
+                <Link href="https://www.facebook.com/share/GSzjmwyvize3qLfV/?mibextid=qi2Omg" target="_blank" title="facebook">
                   <FontAwesomeIcon icon={faFacebook} size="2x" />
                 </Link>
               </li>

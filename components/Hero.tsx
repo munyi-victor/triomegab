@@ -58,7 +58,7 @@ const Hero = () => {
         <div className="flex justify-center text-white mt-2">
           <ul className="flex gap-10 list-none">
             <li>
-              <Link href="/" title="facebook">
+              <Link href="https://www.facebook.com/share/GSzjmwyvize3qLfV/?mibextid=qi2Omg" target="_blank" title="facebook">
                 <FontAwesomeIcon icon={faFacebook} />
               </Link>
             </li>
