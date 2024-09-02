@@ -47,7 +47,7 @@ const Navbar = () => {
       {/* ${
         isScrolled ? "sticky top-0" : ""
       } */}
-      <section className="flex items-center text-[26px] text-white font-bold gap-[10px]">
+      <section className="flex items-center text-2xl text-white font-bold gap-[10px]">
         <Link href={"/"} onClick={closeMenu}>
           <Image
             src="/logo.png"
@@ -57,7 +57,7 @@ const Navbar = () => {
             className="rounded-full"
           />
         </Link>
-        <h1>TriomegaB</h1>
+        <h2>TriomegaB</h2>
       </section>
 
       <div

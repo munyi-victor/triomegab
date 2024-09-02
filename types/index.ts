@@ -7,6 +7,13 @@ export interface ButtonProps {
 
 export interface ModalProps {
   closeModal: () => void;
+  price?: number;
+}
+
+export interface JoinFormProps {
+  fname: string;
+  lname: string;
+  email: string;
 }
 
 export interface DonationsProps {

@@ -6,7 +6,7 @@ import Cores from "./Cores";
 import JoinModal from "./JoinModal";
 import ScrollToTopButton from "./ScrollToTopButton";
 import ShowAlert from "./ShowAlert";
-import Donations from "./Donations";
+import Donations from "./DonationsCard";
 import TeamMembers from "./TeamMembers";
 
 export default {

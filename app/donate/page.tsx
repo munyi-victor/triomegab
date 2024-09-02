@@ -1,6 +1,4 @@
-import Image from "next/image";
-
-import Donations from "@/components/Donations";
+import DonationsCard from "@/components/DonationsCard";
 
 const Donate = () => {
   return (
@@ -14,25 +12,22 @@ const Donate = () => {
         </p>
       </div>
 
-      <Donations
+      <DonationsCard
         itemName="Bathing Soaps"
         imageSrc="/hero_img.jpg"
         price={250}
-        description="Donate soap to help our kids maintain a high level of hygiene and cleanliness in general."
       />
 
-      <Donations
+      <DonationsCard
         itemName="Sanitary Pads"
         imageSrc="/hero_img.jpg"
         price={300}
-        description="Donate sanitary pads to help our kids maintain a high level of hygiene and cleanliness in general."
       />
 
-      <Donations
+      <DonationsCard
         itemName="Inner-wears"
         imageSrc="/hero_img.jpg"
         price={250}
-        description="Donate inner-wears to help our kids maintain a high level of hygiene and cleanliness in general."
       />
     </div>
   );

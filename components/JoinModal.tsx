@@ -1,13 +1,21 @@
 "use client";
 
 import { useState } from "react";
-
 import CustomButton from "./CustomButton";
-import ShowAlert from "./ShowAlert";
-import { ModalProps } from "@/types";
+import { ModalProps, JoinFormProps } from "@/types";
 
 const JoinModal = ({ closeModal }: ModalProps) => {
+  const [joinForm, setJoinForm] = useState<JoinFormProps>({
+    fname: "",
+    lname: "",
+    email: "",
+  });
+
   const JoinNow = () => {
+    if (!joinForm.fname || !joinForm.lname || !joinForm.email) {
+      alert("Please fill all fields as required.");
+    }
+
     alert("Thank you for joining us, blessings!");
   };
 
@@ -39,6 +47,9 @@ const JoinModal = ({ closeModal }: ModalProps) => {
               <input
                 type="text"
                 id="fname"
+                onChange={(e) =>
+                  setJoinForm({ ...joinForm, fname: e.target.value })
+                }
                 className="rounded-md border border-gray-300 px-3 py-2 focus:outline-none focus:ring-1 focus:ring-blue-500"
               />
             </div>
@@ -53,6 +64,9 @@ const JoinModal = ({ closeModal }: ModalProps) => {
               <input
                 type="text"
                 id="lname"
+                onChange={(e) =>
+                  setJoinForm({ ...joinForm, lname: e.target.value })
+                }
                 className="rounded-md border border-gray-300 px-3 py-2 focus:outline-none focus:ring-1 focus:ring-blue-500"
               />
             </div>
@@ -67,6 +81,9 @@ const JoinModal = ({ closeModal }: ModalProps) => {
               <input
                 type="email"
                 id="email"
+                onChange={(e) =>
+                  setJoinForm({ ...joinForm, email: e.target.value })
+                }
                 className="rounded-md border border-gray-300 px-3 py-2 focus:outline-none focus:ring-1 focus:ring-blue-500"
               />
             </div>

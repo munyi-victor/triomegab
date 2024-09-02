@@ -1,19 +1,17 @@
-import React from 'react';
-import Image from "next/image";
-
-import Cores from '@/components/Cores';
-import TeamMembers from '@/components/TeamMembers';
+import React from "react";
+import Cores from "@/components/Cores";
+import TeamMembers from "@/components/TeamMembers";
 
 const About = () => {
   return (
-    <div className="pt-5">
+    <div className="pt-4">
       <div className="text-center border-b pb-5 px-10">
-        <h1 className="text-3xl font-semibold">About Us</h1>
+        <h1 className="text-2xl font-semibold">About Us</h1>
         <p className="mt-1 text-gray-600">
           We are the TriomegaB Hearts of Passion Foundation. Our aim is to
-          mentor, insipre and build youths to grow into important and valuable
-          individuals. We help them in terms of career choosing, growing talents
-          and also character development.
+          transform lives by offering compassionate support and resources,
+          creating pathways for lasting positive changes and spreading blessings
+          to those in need.
         </p>
 
         <h2 className="mt-3 font-semibold text-2xl">Our History</h2>
@@ -32,9 +30,6 @@ const About = () => {
         </p>
       </div>
       <div>
-        <h2 className="mt-3 font-semibold text-2xl text-center">
-          Our Core Values
-        </h2>
         <Cores />
       </div>
 
@@ -43,16 +38,28 @@ const About = () => {
 
         <div className="pb-4 mt-5">
           <div className="grid md:grid-cols-3 grid-cols-none gap-4">
-            <TeamMembers name="Francis Kivenia" position="Chairman, CEO" imageSrc="/hero_img.jpg" />
+            <TeamMembers
+              name="Francis Kivenia"
+              position="Chairman, CEO"
+              imageSrc="/hero_img.jpg"
+            />
 
-            <TeamMembers name="Victor Munyi" position="Digital Specialist" imageSrc="/hero_img.jpg" />
+            <TeamMembers
+              name="Victor Munyi"
+              position="Digital Specialist"
+              imageSrc="/anime.png"
+            />
 
-            <TeamMembers name="Madrine Njue" position="Events Organizer" imageSrc="/hero_img.jpg" />
+            <TeamMembers
+              name="Madrine Njue"
+              position="Events Organizer"
+              imageSrc="/hero_img.jpg"
+            />
           </div>
         </div>
       </div>
     </div>
   );
-}
+};
 
 export default About;

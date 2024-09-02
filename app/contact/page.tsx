@@ -7,13 +7,24 @@ import { faFacebook } from "@fortawesome/free-brands-svg-icons";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 
 import CustomButton from "@/components/CustomButton";
+import { useState } from "react";
 
 const Contact = () => {
-  const handleSubmit = () => {}
+  const [contactForm, setContactForm] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleSubmit = () => {
+    if (!contactForm.name || !contactForm.email || !contactForm.message) {
+      alert("All fields are required");
+    }
+  };
 
   return (
     <div className="lg:h-[84vh] pt-4 w-full">
-      <h1 className="text-3xl font-semibold md:text-4xl text-center">
+      <h1 className="text-2xl font-semibold md:text-4xl text-center">
         Contact us
       </h1>
 
@@ -31,6 +42,10 @@ const Contact = () => {
                 type="text"
                 id="name"
                 placeholder="Your name"
+                required
+                onChange={(e) =>
+                  setContactForm({ ...contactForm, name: e.target.value })
+                }
                 className="rounded-md border border-gray-300 px-3 py-2 focus:outline-none focus:ring-1 focus:ring-blue-500"
               />
             </div>
@@ -46,6 +61,10 @@ const Contact = () => {
                 type="email"
                 id="email"
                 placeholder="Your email"
+                required
+                onChange={(e) =>
+                  setContactForm({ ...contactForm, email: e.target.value })
+                }
                 className="rounded-md border border-gray-300 px-3 py-2 focus:outline-none focus:ring-1 focus:ring-blue-500"
               />
             </div>
@@ -61,6 +80,10 @@ const Contact = () => {
                 id="message"
                 rows={4}
                 placeholder="Your message"
+                required
+                onChange={(e) =>
+                  setContactForm({ ...contactForm, message: e.target.value })
+                }
                 className="rounded-md border border-gray-300 px-3 py-2 focus:outline-none focus:ring-1 focus:ring-blue-500"
               />
             </div>
@@ -82,8 +105,12 @@ const Contact = () => {
           <div className="mt-4">
             <h2 className="text-center text-xl font-semibold">Telephone:</h2>
             <ul className="mt-2">
-              <li>+254727632463</li>
-              <li>+254708905136</li>
+              <li>
+                <a href="tel:+254727632463">+254727632463</a>
+              </li>
+              <li>
+                <a href="tel:+254708905136">+254708905136</a>
+              </li>
             </ul>
           </div>
 
@@ -91,7 +118,11 @@ const Contact = () => {
             <h2 className="text-center text-xl font-semibold">Social Media:</h2>
             <ul className="mt-2 flex gap-6 justify-center">
               <li>
-                <Link href="https://www.facebook.com/share/GSzjmwyvize3qLfV/?mibextid=qi2Omg" target="_blank" title="facebook">
+                <Link
+                  href="https://www.facebook.com/share/GSzjmwyvize3qLfV/?mibextid=qi2Omg"
+                  target="_blank"
+                  title="facebook"
+                >
                   <FontAwesomeIcon icon={faFacebook} size="2x" />
                 </Link>
               </li>

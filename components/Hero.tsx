@@ -4,7 +4,6 @@ import { useState } from "react";
 import Link from "next/link";
 
 import CustomButton from "./CustomButton";
-import ShowAlert from "./ShowAlert";
 import JoinModal from "@/components/JoinModal";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -14,7 +13,6 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 const Hero = () => {
   const [modalOpen, setModalOpen] = useState(false);
-  const [joined, setJoined] = useState(false);
 
   const openModal = () => {
     setModalOpen(true);
@@ -26,14 +24,12 @@ const Hero = () => {
 
   return (
     <div
-      className="bg-cover bg-center bg-no-repeat h-[89vh] lg:h-[90vh] w-full text-center px-2 pt-24 md:p-36 pb-10 border-b border-solid border-black-100"
+      className="bg-cover bg-center bg-no-repeat h-[90vh] w-full text-center px-2 pt-24 md:p-36 pb-10 border-b border-solid border-black-100"
       style={{
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/hero_img.jpg")`,
       }}
     >
-      {joined && <ShowAlert />}
-
-      <h1 className="text-4xl font-semibold text-white">
+      <h1 className="text-2xl lg:text-3xl font-semibold text-white">
         Join us now as we <br />
         mentor, inspire and build the youths!
       </h1>
@@ -46,7 +42,7 @@ const Hero = () => {
       <div className="mt-20 flex items-center justify-center">
         <CustomButton
           customClass="primary"
-          value="Join Us Now"
+          value="Join us"
           handleClick={openModal}
         />
       </div>
@@ -58,7 +54,11 @@ const Hero = () => {
         <div className="flex justify-center text-white mt-2">
           <ul className="flex gap-10 list-none">
             <li>
-              <Link href="https://www.facebook.com/share/GSzjmwyvize3qLfV/?mibextid=qi2Omg" target="_blank" title="facebook">
+              <Link
+                href="https://www.facebook.com/share/GSzjmwyvize3qLfV/?mibextid=qi2Omg"
+                target="_blank"
+                title="facebook"
+              >
                 <FontAwesomeIcon icon={faFacebook} />
               </Link>
             </li>
