@@ -14,9 +14,9 @@ const JoinModal = ({ closeModal }: ModalProps) => {
   const JoinNow = () => {
     if (!joinForm.fname || !joinForm.lname || !joinForm.email) {
       alert("Please fill all fields as required.");
+    } else {
+      alert("Thank you for joining us, blessings!");
     }
-
-    alert("Thank you for joining us, blessings!");
   };
 
   return (
