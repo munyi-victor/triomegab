@@ -3,6 +3,7 @@
 import { useState } from "react";
 import CustomButton from "./CustomButton";
 import { ModalProps, JoinFormProps } from "@/types";
+import { joinUsFunction } from "@/appwrite/appwrite";
 
 const JoinModal = ({ closeModal }: ModalProps) => {
   const [joinForm, setJoinForm] = useState<JoinFormProps>({
@@ -11,12 +12,18 @@ const JoinModal = ({ closeModal }: ModalProps) => {
     email: "",
   });
 
-  const JoinNow = () => {
-    if (!joinForm.fname || !joinForm.lname || !joinForm.email) {
-      alert("Please fill all fields as required.");
-    } else {
-      alert("Thank you for joining us, blessings!");
-    }
+  // const JoinNow = () => {
+  //   if (!joinForm.fname || !joinForm.lname || !joinForm.email) {
+  //     alert("Please fill all fields as required.");
+  //   } else {
+  //     // alert("Thank you for joining us, blessings!");
+
+  //     joinUsFunction(joinForm);
+  //   }
+  // };
+
+  const JoinNow = async () => {
+    await joinUsFunction(joinForm);
   };
 
   return (
