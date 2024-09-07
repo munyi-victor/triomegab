@@ -12,18 +12,16 @@ const JoinModal = ({ closeModal }: ModalProps) => {
     email: "",
   });
 
-  // const JoinNow = () => {
-  //   if (!joinForm.fname || !joinForm.lname || !joinForm.email) {
-  //     alert("Please fill all fields as required.");
-  //   } else {
-  //     // alert("Thank you for joining us, blessings!");
-
-  //     joinUsFunction(joinForm);
-  //   }
-  // };
-
-  const JoinNow = async () => {
-    await joinUsFunction(joinForm);
+  const JoinNow = () => {
+    if (!joinForm.fname || !joinForm.lname || !joinForm.email) {
+      alert("Please fill all fields as required.");
+    } else {
+      joinUsFunction(joinForm)
+        .then(() => {
+          alert("Thank you for joining us, blessings!");
+        })
+        .catch((error) => alert(error));
+    }
   };
 
   return (
