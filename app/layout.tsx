@@ -4,6 +4,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
 
+import { Analytics } from "@vercel/analytics/react";
+
 export const metadata: Metadata = {
   title: "TriomegaB Hearts of Passion Foundation",
   description:
@@ -19,6 +21,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <div className="min-h-screen flex flex-col">
+          <Analytics />
           <Navbar />
           {children}
           <ScrollToTopButton />
