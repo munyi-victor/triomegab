@@ -7,9 +7,14 @@ import ScrollToTopButton from "@/components/ScrollToTopButton";
 import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
-  title: "TriomegaB Hearts of Passion Foundation",
+  metadataBase: new URL("https://triomegab.vercel.app"),
+  title: {
+    default:"TriomegaB Hearts of Passion Foundation",
+    template:`%s | TriomegaB Hearts of Passion Foundation`
+  },
   description:
     "A charity organization aimed at mentoring, inspiring and building youths through providing better health, education and general lifestyle",
+  keywords:["charity foundation kenya", "NGO kenya", "non-profit organization kenya", "Kenyan charity","Kenyan NGO","best charity in kenya", "top NGOs in kenya", "how to donate to charity in kenya", "kenyan charity organizations","volunteer opportunities in kenya"]
 };
 
 export default function RootLayout({

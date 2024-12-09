@@ -1,5 +1,11 @@
+import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+
+export const metadata:Metadata = {
+  title:"Touch a Life",
+  description:"This is how you donate to the TriomegaB Hearts of Passion Foundation."
+}
 
 const TouchLife = () => {
   return (

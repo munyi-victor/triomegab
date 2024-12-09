@@ -1,6 +1,12 @@
 import React from "react";
 import Cores from "@/components/Cores";
 import TeamMembers from "@/components/TeamMembers";
+import { Metadata } from "next";
+
+export const metadata:Metadata = {
+  title:"About us",
+  description:"This is the about page of TriomegaB official website."
+}
 
 const About = () => {
   return (

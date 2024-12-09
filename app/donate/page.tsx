@@ -1,4 +1,10 @@
 import DonationsCard from "@/components/DonationsCard";
+import { Metadata } from "next";
+
+export const metadata:Metadata = {
+  title:"Donate",
+  description:"Donate to the TriomegaB hearts of passion foundation."
+}
 
 const Donate = () => {
   return (
